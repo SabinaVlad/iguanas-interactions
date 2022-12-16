@@ -1,119 +1,40 @@
-[![GloBI review by Elton](https://github.com/globalbioticinteractions/template-dataset/actions/workflows/review.yml/badge.svg)](https://github.com/globalbioticinteractions/template-dataset/actions) [![Build Status](https://app.travis-ci.com/globalbioticinteractions/template-dataset.svg)](https://app.travis-ci.com/globalbioticinteractions/template-dataset) [![DOI](https://zenodo.org/badge/26293374.svg)](https://zenodo.org/badge/latestdoi/26293374) [![GloBI](https://api.globalbioticinteractions.org/interaction.svg?accordingTo=globi:globalbioticinteractions/template-dataset)](https://globalbioticinteractions.org/?accordingTo=globi:globalbioticinteractions/template-dataset) 
-
-This repository provides an example on how to make your interaction data available through Global Biotic Interactions (GloBI, http://globalbioticinteractions.org) .
-
-If you have comments or questions please [open an issue](https://github.com/globalbioticinteractions/globalbioticinteractions/issues/new).
-
-## Share Your Interaction Data
-If you want to make your own data discoverable through GloBI:
-
-1. Create a repository from this template dataset by visiting  https://github.com/globalbioticinteractions/template-dataset/generate or clicking the "use this template" button.
-2. Edit your ```README.md``` and describe your data in a human readable form.
-3. Ensure that your README.md contains a reference to ```http://globalbioticinteractions.org```.
-4. Edit your ```globi.json``` to provide a machine readable description of your dataset (e.g. citation, license, version, files, format).
-5. Edit the name of your repository and description to make it easy for others to understand what your data is about.
-
-After you do this, the data will be available through GloBI within a day or so.
-
-If you don't feel comfortable being indexed by GloBI because your data isn't ready yet, or no longer up-to-date, you can set ```"deprecated": true``` in ```globi.json``` to unlist (or opt-out) the dataset to be indexed and made visible via https://globalbioticinteractions.org (see https://github.com/globalbioticinteractions/globalbioticinteractions/issues/372). 
-
-## Enable Automated Dataset Preservation/Publication
-Preserving and publishing your valuable data is now easier than ever. 
-
-To enable automated preserving and publishing your data:
-
-1. login/register with [zenodo](https://zenodo.org)
-2. enable automated preservation and publication of your dataset using instructions at  https://zenodo.org/account/settings/github/ or https://guides.github.com/activities/citable-code/
-3. edit your zenodo publication and add it to zenodo's [Global Biotic Interactions community](https://zenodo.org/communities/globalbioticinteractions/). 
-
-For a completed example, see the publication of this template repository at [![DOI](https://zenodo.org/badge/26293374.svg)](https://zenodo.org/badge/latestdoi/26293374).
-
-## Enable Integration Testing
-You can use http://travis-ci.com to check whether your data can be read by GloBI. This helps you to confirm that the changes you make in your GloBI data repository are compatible with GloBIs data processing pipeline.
-
-To enable:
-
-1. make sure that the file ```.travis.yml``` is present in your repo. If not, copy the one available in https://github.com/globalbioticinteractions/template-dataset/blob/master/.travis.yml . 
-2. go to http://travis-ci.com and login using your github credentials
-3. locate your data repository in your account list
-4. enable your data repository for travis
-5. now, trigger your first build by making a change in your repository
-6. confirm that travis-ci.com picks up on your changes
-
-Now, whenever you make a change to data repository that is incompatible with GloBI, you receive a notification. If you'd like, you can include a build badge on your own html pages to see the health of your data. Here's an example of a build badge:  
-
-[![Build Status](https://travis-ci.com/globalbioticinteractions/template-dataset.png)](https://travis-ci.com/globalbioticinteractions/template-dataset)
+[![GloBI review by Elton](https://github.com/SabinaVlad/iguana/actions/workflows/review.yml/badge.svg)](https://github.com/SabinaVlad/iguanas-interactions/actions) [![Build Status](https://app.travis-ci.com/SabinaVlad/iguanas-interactions.svg)](https://app.travis-ci.com/SabinaVlad/iguanas-interactions) [![GloBI](https://api.globalbioticinteractions.org/interaction.svg?accordingTo=globi:SabinaVlad/iguanas-interactions)](https://globalbioticinteractions.org/?accordingTo=globi:SabinaVlad/iguanas-interactions) 
 
 
-## Data Format and Dictionary
-The file [interactions.tsv](./interactions.tsv) is a suggestion on how to encode your interaction data using a tab separated file format (tsv) in combination with columns described below. This provides an example on how to capture your data in a human and machine friendly way and keep it relatively doable to update the file using a basic text editor. Other formats are supported, just let us know about the syntax, and we'll make it work.
-
-Each term has two columns: one for an id and another for a label. The former is to make the term machine readable, the latter to make is easy to read for humans. With both id and name present possible typos or other transcription errors can be detected with a (somewhat) straightforward algorithm.
+## Interactions data on *Iguana iguana* and other taxa from its native distribution and areas where it was introduced
 
 
-term | example | description | 
---- | --- | ---
-argumentTypeId | https://en.wiktionary.org/wiki/refute | a URI that points to a definition of how this records support, refutes or provides other kind of arguments in the context of described interaction. When unspecified, the argument is assumed to be in support of the documented interaction claim.
- argumentTypeName | refute | a human readable name that qualifies whether the record is in support or refutes of a particular interaction
-sourceOccurrenceId | 83742b5e-f0fd-4c12-a0af-c97191ea7722 | globally unique id to reference the individual originating organism, specimen. Inspired by http://rs.tdwg.org/dwc/terms/#occurrenceID .
- sourceTaxonId | EOL:328583 | taxon classification id of originating organism in some taxon name authority
- sourceTaxonName | Enhydra lutris | scientific name of taxon classification of originating organism 
- sourceTaxonKingdomName | Animalia | name of kingdom of taxon classification of originating organism 
- sourceTaxonPhylumName | Chordata | name of phylum of taxon classification of originating organism 
- sourceTaxonClassName | Gastropoda | name of class of taxon classification of originating organism 
- sourceTaxonOrderName | Carnivora | name of order of taxon classification of originating organism 
- sourceTaxonFamilyName | Mustelidae | name of family of taxon classification of originating organism 
- sourceTaxonGenusName | Enhydra | name of genus of taxon classification of originating organism 
- sourceTaxonSpecificEpithetName | lutris | name of specific epithet of taxon classification of originating organism 
- sourceTaxonSubspecificEpithetName | nereis | name of subspecific epithet of taxon classification of originating organism 
- sourceBodyPartId | http://purl.obolibrary.org/obo/UBERON_0000178 | identifier of description of source body part is interacted with
- sourceBodyPartName | blood | human readable description of source body part (e.g., "blood", "fruit")
- sourceLifeStageId | http://purl.obolibrary.org/obo/UBERON_0007023 | identifier of description of source life stage
- sourceLifeStageName | adult | human readable description of source life stage (e.g., "adult", "juvenile")
- sourcePhysiologicalStateId | http://purl.obolibrary.org/obo/PATO_0001422 | identifier of description of source physiological state
- sourcePhysiologicalStateName | dead | human readable description of source physiological state (e.g., "dead", "rotten")
- interactionTypeId | RO:0002470 | id of interaction as described by the [OBO Relations Ontology](https://github.com/oborel/obo-relations)
- interactionTypeName | eats | human readable description of interactions
- targetOccurrenceId | a5ee64b5-081b-4fff-8adc-2b0c74b1f40a | globally unique id to reference the individual target organism, specimen. Inspired by http://rs.tdwg.org/dwc/terms/#occurrenceID .
- targetTaxonId |  EOL:1971 | taxon classification id of target organism. 
- targetTaxonName | Echinoidea | scientific name of taxon classification of target organism of interaction
- targetTaxonKingdomName | Animalia | name of kingdom of taxon classification of target organism of interaction
- targetTaxonPhylumName | Chordata | name of phylum of taxon classification of target organism of interaction
- targetTaxonClassName | Gastropoda | name of class of taxon classification of target organism of interaction
- targetTaxonOrderName | Carnivora | name of order of taxon classification of target organism of interaction
- targetTaxonFamilyName | Mustelidae | name of family of taxon classification of target organism of interaction
- targetTaxonGenusName | Enhydra | name of genus of taxon classification of target organism of interaction
- targetTaxonSpecificEpithetName | lutris | name of specific epithet of taxon classification of target organism of interaction
- targetTaxonSubSpecificEpithetName | nereis | name of subspecific epithet of taxon classification of target organism of interaction
- targetBodyPartId | http://purl.obolibrary.org/obo/UBERON_0000178 | identifier of description of target body part is interacted with
- targetBodyPartName | Echinoidea | human readable description of target body part (e.g., "blood")
- targetLifeStageId | http://purl.obolibrary.org/obo/UBERON_0007023 | identifier of description of target life stage
- targetLifeStageName | adult | human readable description of target life stage (e.g., "adult", "juvenile")
- targetPhysiologicalStateId | http://purl.obolibrary.org/obo/PATO_0001422 | identifier of description of target's phyiological state
- targetPhysiologicalStateName | dead | human readable description of target's physiological state (e.g., "dead", "rotten")
- habitatId | ENVO:00000067 or http://purl.obolibrary.org/obo/ENVO_00000067 | reference to a habitat classification like Environmental Ontology (http://environmentontology.org/), Coastal and Marine Classification Standards (CMECS, https://iocm.noaa.gov/standards/cmecs-home.html).
- habitatName | cave | human readable description of habitat
- localityId | GEONAMES:5391961 | reference to geo classification like geonames.org, gazetteer or other.
- localityName | San Francisco Bay, California, USA | human readable description of locale
- decimalLatitude | -41.0983423 | latitude of geographic center of interaction observation location http://rs.tdwg.org/dwc/terms/index.htm#decimalLatitude
- decimalLongitude | -121.1761111 | longtide of geographic center of interaction observation location http://rs.tdwg.org/dwc/terms/index.htm#decimalLongitude
- depth | 123.2 | distance below surface in meters
- altitude | 4553.2 | height above sea level in meters
- observationDateTime | 2014-11-18T06:37:04Z | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) formatted date time string 
- referenceDoi | doi:10.1126/science.200.4340.403 | Digital Object Id (DOI, http://doi.org) is commonly used to give papers, datasets or other digital object a permanent id
- referenceUrl | http://eol.org/data_objects/13596344 | some resolvable url that point to information related to species interaction record
- referenceCitation| C. A. Simenstad, J. A. Estes, K. W. Kenyon, Aleuts, sea otters, and alternate stable-state communities, Science 200:403-411, from p. 404 (1978). | human readable reference 
+Repository for uploading biotic interactions data of the Green Iguana *Iguana iguana* on GLOBI (Global Biotic Interactions, https://www.globalbioticinteractions.org/) from its native distribution and areas where it was introduced.
+This list of interactions comes as a supplement to the already published data set DOI: 10.5281/zenodo.6355576
 
-## Term Id Sources
-Rather than only supplying a name for a taxon and/or locality, a reference to some established taxonomy and/or geo database is preferred. Commonly used taxon id sources include, but are not limited to [GBIF](http://gbif.org), [EOL](http://eol.org),  [ITIS](http://itis.gov) and [WoRMS](http://marinespecies.org). Geo database or vocabularies include [geonames](http://geonames.org) and [Gazetteer Ontology](http://bioportal.bioontology.org/ontologies/GAZ).
- 
-## Interaction Id Cheatsheet
 
-For more terms, please see [OBO Relations Ontology](https://github.com/oborel/obo-relations).
- 
-interactionTypeId | interactionTypeName 
---- | ---
-[RO:0002470](http://www.ontobee.org/browser/rdf.php?o=RO&iri=http://purl.obolibrary.org/obo/RO_0002470) | eats
-[RO:0002444](http://www.ontobee.org/browser/rdf.php?o=RO&iri=http://purl.obolibrary.org/obo/RO_0002444) | parasite of
-[RO:0002455](http://www.ontobee.org/browser/rdf.php?o=RO&iri=http://purl.obolibrary.org/obo/RO_0002455) | pollinates
-[RO:0002556](http://www.ontobee.org/browser/rdf.php?o=RO&iri=http://purl.obolibrary.org/obo/RO_0002556) | pathogen of
+Interactions were derived from the literature by consulting the following references:
+1. Van den Burg, M. P., Madden, H., & Debrot, A. O. (2022). Population estimate, natural history and conservation of the melanistic Iguana iguana population on Saba, Caribbean Netherlands. bioRxiv.
+2. López-Torres, A. L., Claudio-Hernández, H. J., Rodriguez-Gomez, C. A., Longo, A. V., & Joglar, R. L. (2012). Green Iguanas (Iguana iguana) in Puerto Rico: is it time for management?. Biological invasions, 14(1), 35-45.
+3. Arce-Nazario, J. A., & Carlo, T. A. (2012). Iguana iguana invasion in Puerto Rico: facing the evidence. Biological Invasions, 14(9), 1981-1984.
+4. Rand, A. S. (1968). A nesting aggregation of iguanas. Copeia, 552-561.
+5. Burghardt, G. M., & Rand, A. S. (1982). Iguanas of the world: their behavior, ecology, and conservation. Noyes Publications.
+6. Rand, A. S., Dugan, B. A., Monteza, H., & Vianda, D. (1990). The diet of a generalized folivore: Iguana iguana in Panama. Journal of Herpetology, 24(2), 211-214.
+7. Burgos-Rodriguez, J. A. (2014). Effects of introduced Green Iguanas (Iguana iguana) on tropical plant communities through seed dispersal and germination. University of Rhode Island.
+8. Lara-López, M., & González-Romero, A. (2002). Alimentación de la iguana verde Iguana iguana (squamata: iguanidae) en La Mancha, Veracruz, México. Acta zoológica mexicana, (85), 139-152.
+9. Burghardt, G. M., Greene, H. W., & Rand, A. S. (1977). Social behavior in hatchling green iguanas: life at a reptile rookery. Science, 195(4279), 689-691.
+10. Troyer, K. (1984). Diet selection and digestion in Iguana iguana: the importance of age and nutrient requirements. Oecologia, 61(2), 201-207.
+11. Hirth, H. F. (1963). The ecology of two lizards on a tropical beach. Ecological Monographs, 33(2), 83-112.
+12. Burgos-Rodríguez, J. A., Avilés-Rodríguez, K. J., & Kolbe, J. J. (2016). Effects of invasive Green Iguanas (Iguana iguana) on seed germination and seed dispersal potential in southeastern Puerto Rico. Biological invasions, 18(10), 2775-2782.
+13. Figueiredo-de-Andrade, C. A., Montoya-Ospina, R. A., Voltolini, J. C., & Ruiz-Miranda, C. R. (2011). Population biology and behaviour of the alien species Iguana iguana (Linnaeus, 1758) on a restored wetland in Puerto Rico. Herpetology Notes, 4, 445-451.
+14. Joglar, T. A. C., & Quijano, C. G. G. (2008). Assessing ecosystem and cultural impacts of the green iguana (Iguana iguana) invasion in the San Juan Bay Estuary (SJBE) in Puerto Rico.
+15. Germination and Seed Damage in Tropical Dry Forest
+16. Pérez-Rivera, R. A. Green Iguana, Iguana iguana (Linnaeus, 1758) Disrupts the Nesting of Birds in Puerto Rico1.
+17. García-Quijano, C., Carlo, T., & Arce-Nazario, J. (2011). Human ecology of a species introduction: Interactions between humans and introduced green iguanas in a Puerto Rican urban estuary. Human Organization, 70(2), 164-178.
+18. Cedeño, Y. N., Cordero G. (2009). Especie Invasora Atenta Contra el Coquí. El Nuevo Día. Ciencia Puerto Rico
+19. Powell, R., Henderson, R. W., Farmer, M. C., Breuil, M., Echternacht, A. C., Van Buurt, G., ... & Perry, G. (2011). Introduced amphibians and reptiles in the Greater Caribbean: Patterns and conservation implications. In Conservation of Caribbean Island Herpetofaunas Volume 1: Conservation Biology and the Wider Caribbean (pp. 63-143). Brill.
+20. Hallwachs, W. (1986). Agoutis (Dasyprocta punctata): the inheritors of guapinol (Hymenaea courbaril: Leguminosae). In Frugivores and seed dispersal (pp. 285-304). Springer, Dordrecht.
+21. Sánchez-Brenes, R. J., & Monge, J. (2021). Períodos de actividad y dieta de Dasyprocta punctata (Gray, 1842)(Rodentia; Dasyproctidae) en agroecosistemas con café, San Ramón, Costa Rica. Acta zoológica mexicana, 37.
+22. Peterson, M. (2007). Seed toughness in Persea americana (Lauraceae) and Dioclea reflexa (Papilionaceae) and feeding behavior in agoutis (Dasyprocta punctata).
+23. Bonaccorso, F. J., Glanz, W. E., & Sandford, C. M. (1980). Feeding assemblages of mammals at fruiting Dipteryx panamensis (Papilionaceae) trees in Panama: seed predation, dispersal, and parasitism. Revista de Biologia Tropical, 28(1), 61-72.
+24. Coogan, K. (2006). Seed preference in the central american agouti, Dasyprocta punctata.
+25. Eberhart, L. (2006). Foraging behavior and diet preference of Dasyprocta punctata.
+26. Burkard Jr, G. P. (2005). Seed predation on Persea americana by Dasyprocta punctata in Monteverde, Costa Rica.
+27. Senf, M. (2004). Mucuna urens dispersal by agoutis (Dasyprocta punctata) in the Monteverde area of Costa Rica.
+28. Hirsch, B. T., Kays, R., & Jansen, P. A. (2013). Evidence for cache surveillance by a scatter-hoarding rodent. Animal Behaviour, 85(6), 1511-1516.
+29. Rand, A. S., & Robinson, M. H. (1969). Predation on iguana nests. Herpetologica, 25(3), 172-174.
