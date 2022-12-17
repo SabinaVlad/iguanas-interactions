@@ -1,7 +1,7 @@
 [![GloBI review by Elton](https://github.com/SabinaVlad/iguana/actions/workflows/review.yml/badge.svg)](https://github.com/SabinaVlad/iguanas-interactions/actions) [![Build Status](https://app.travis-ci.com/SabinaVlad/iguanas-interactions.svg)](https://app.travis-ci.com/SabinaVlad/iguanas-interactions) [![GloBI](https://api.globalbioticinteractions.org/interaction.svg?accordingTo=globi:SabinaVlad/iguanas-interactions)](https://globalbioticinteractions.org/?accordingTo=globi:SabinaVlad/iguanas-interactions) 
 
 
-## Interactions data on *Iguana iguana* and other taxa from its native distribution and areas where it was introduced
+## Interactions data on *Iguana iguana* and other taxa from its native distribution and areas where it was introduced V2.0
 
 
 Repository for uploading biotic interactions data of the Green Iguana *Iguana iguana* on GLOBI (Global Biotic Interactions, https://www.globalbioticinteractions.org/) from its native distribution and areas where it was introduced.
