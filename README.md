@@ -39,3 +39,5 @@ Interactions were derived from the literature by consulting the following refere
 28. Hirsch, B. T., Kays, R., & Jansen, P. A. (2013). Evidence for cache surveillance by a scatter-hoarding rodent. Animal Behaviour, 85(6), 1511-1516.
 29. Rand, A. S., & Robinson, M. H. (1969). Predation on iguana nests. Herpetologica, 25(3), 172-174.
 30. Popescu, I. S. (2018). Investigations into green iguana (Iguana iguana) as a potential carrier for a novel strain of Helicobacter spp, pathogenic for the endangered blue iguana (Cyclura lewisi). MVetSci Conservation Medicine Thesis, Edinburgh: The University of Edinburgh.
+31. Rataj, A. V., Lindtner-Knific, R., Vlahović, K., Mavri, U., & Dovč, A. (2011). Parasites in pet reptiles. Acta Veterinaria Scandinavica, 53(1), 1-21.
+32. Prud'homme, Y., Burton, F. J., McClave, C., & Calle, P. P. (2018). Prevalence, incidence, and identification of Salmonella enterica from wild and captive Grand Cayman iguanas (Cyclura lewisi). Journal of Zoo and Wildlife Medicine, 49(4), 959-966.
