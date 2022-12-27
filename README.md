@@ -38,3 +38,4 @@ Interactions were derived from the literature by consulting the following refere
 27. Senf, M. (2004). Mucuna urens dispersal by agoutis (Dasyprocta punctata) in the Monteverde area of Costa Rica.
 28. Hirsch, B. T., Kays, R., & Jansen, P. A. (2013). Evidence for cache surveillance by a scatter-hoarding rodent. Animal Behaviour, 85(6), 1511-1516.
 29. Rand, A. S., & Robinson, M. H. (1969). Predation on iguana nests. Herpetologica, 25(3), 172-174.
+30. Popescu, I. S. (2018). Investigations into green iguana (Iguana iguana) as a potential carrier for a novel strain of Helicobacter spp, pathogenic for the endangered blue iguana (Cyclura lewisi). MVetSci Conservation Medicine Thesis, Edinburgh: The University of Edinburgh.
